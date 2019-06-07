@@ -30,6 +30,6 @@
         </property>
         <property name="appkey" value="com.meituan.octo.dorado.server"/>
         <property name="port" value="9001"/> <!-- Server 监听端口 -->
-        <property name="registry" value="zookeeper://127.0.0.1:9000"/> <!-- 换成你的zk地址 -->
+        <property name="registry" value="zookeeper://127.0.0.1:2181"/> <!-- 换成你的zk地址 -->
     </bean>
 </beans>

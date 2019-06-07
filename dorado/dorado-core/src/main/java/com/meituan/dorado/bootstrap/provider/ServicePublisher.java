@@ -68,6 +68,7 @@ public class ServicePublisher extends ServiceBootstrap {
         Server server = serverFactory.buildServer(config);
 
         for (ServiceConfig serviceConfig : config.getServiceConfigList()) {
+            // TODO 对于serviceInterfaceMap、serviceImplMap在ProviderChannelHandler也有
             serviceInterfaceMap.put(serviceConfig.getServiceName(), serviceConfig.getServiceInterface());
             serviceImplMap.put(serviceConfig.getServiceName(), serviceConfig.getServiceImpl());
             servicePortMap.put(serviceConfig.getServiceName(), config.getPort());
@@ -125,6 +126,7 @@ public class ServicePublisher extends ServiceBootstrap {
         info.setPort(providerConfig.getPort());
         info.setProtocol(providerConfig.getProtocol());
         info.setSerialize(providerConfig.getSerialize());
+        // TODO 直接设置状态为alive，应该由scanner将状态置为alive
         info.setStatus(ProviderStatus.ALIVE.getCode());
         info.setWeight(providerConfig.getWeight());
         info.setWarmUp(providerConfig.getWarmup());
