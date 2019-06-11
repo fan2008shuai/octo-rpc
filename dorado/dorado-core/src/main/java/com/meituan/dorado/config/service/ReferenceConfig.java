@@ -77,7 +77,7 @@ public class ReferenceConfig<T> extends AbstractConfig {
     // 兼容bean配置, 也可以SPI配置
     private List<Filter> filters = Collections.emptyList();
 
-    private String env = Constants.EnvType.TEST.getEnvName();
+    private String env = Constants.EnvType.PROD.getEnvName();
 
     // 接口代理类
     private transient volatile T proxyObj;

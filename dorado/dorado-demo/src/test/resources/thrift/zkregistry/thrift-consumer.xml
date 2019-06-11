@@ -24,7 +24,7 @@
         <property name="remoteAppkey" value="com.meituan.octo.dorado.server"/>
         <property name="serviceInterface" value="com.meituan.dorado.test.thrift.api.HelloService"/> <!-- 接口类 -->
         <property name="timeout" value="1000"/>
-        <property name="registry" value="zookeeper://127.0.0.1:9000"/> <!-- 换成你的zk地址 -->
+        <property name="registry" value="zookeeper://mtp-test-002.soho.momo.com:5000"/> <!-- 换成你的zk地址 -->
     </bean>
 
 </beans>
