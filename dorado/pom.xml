@@ -369,6 +369,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -382,6 +385,7 @@
                 <!--<groupId>org.jacoco</groupId>-->
                 <!--<artifactId>jacoco-maven-plugin</artifactId>-->
             <!--</plugin>-->
+
         </plugins>
 
         <resources>

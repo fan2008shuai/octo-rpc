@@ -199,6 +199,7 @@ public class InvokerRepository<T> implements ProviderListener {
     }
 
     private Invoker<T> initInvoker(Provider provider) {
+        // TODO 每次都更新这个字段，是不是再抽象一下ClientConfig
         clientConfig.setAddress(provider.getIp(), provider.getPort());
         return invokerFactory.buildInvoker(clientConfig, provider);
     }

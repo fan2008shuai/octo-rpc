@@ -61,6 +61,7 @@ public class NettyHttpServer extends AbstractHttpServer {
         synchronized (NettyHttpServer.class) {
             if (httpServer == null) {
                 httpServer = new NettyHttpServer(rpcRole);
+                // TODO new NettyHttpServer(rpcRole) 时已经start
                 httpServer.start();
             }
         }

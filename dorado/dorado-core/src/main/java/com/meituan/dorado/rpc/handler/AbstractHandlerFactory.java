@@ -38,6 +38,7 @@ public abstract class AbstractHandlerFactory implements HandlerFactory {
             InvokeHandler serviceInvokeHandler = serviceInvokeHandlers.get(rpcRole);
             if (serviceInvokeHandler == null) {
                 synchronized (HandlerFactory.class) {
+                    // TODO 😂
                     if (serviceInvokeHandler == null) {
                         serviceInvokeHandler = createServiceInvocationHandler(rpcRole);
                         serviceInvokeHandlers.putIfAbsent(rpcRole, serviceInvokeHandler);

@@ -158,6 +158,7 @@ public class NettyServer extends AbstractServer {
     }
 
     private Class<?> getDefaultServiceIface(List<ServiceConfig> serviceConfigList) {
+        // TODO 一个appKey多个serviceName的返回null
         if (serviceConfigList.size() == 1) {
             // 单端口端服务
             Class<?> serviceIface = serviceConfigList.get(0).getServiceInterface();

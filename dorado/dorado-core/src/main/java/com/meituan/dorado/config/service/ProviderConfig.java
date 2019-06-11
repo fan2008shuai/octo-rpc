@@ -54,6 +54,7 @@ public class ProviderConfig {
     private boolean timelineTrace;
     // 兼容bean配置, 也可以SPI配置
     private List<Filter> filters = Collections.emptyList();
+    // TODO 应该读取/data/webapps/octo.cfg
     private String env = Constants.EnvType.PROD.getEnvName();
 
     private volatile ShutDownHook hook;
